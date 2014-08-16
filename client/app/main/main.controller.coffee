@@ -17,7 +17,7 @@ angular.module 'ddosApp'
 		if $scope.options.method = 'post'
 			i = 0
 			while i < $scope.options.number
-				$http.post('http://localhost:8000/api/orders', $scope.options.data).success (data, status) ->
+				$http.post($scope.options.address, $scope.options.data).success (data, status) ->
 					console.log('server respond: ' + status + ' ' + data)
 				.error (data, status) ->
 					console.log('server respond: ' + status + ' ' + data)
