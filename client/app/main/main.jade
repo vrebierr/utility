@@ -1,0 +1,20 @@
+.container
+	.row
+		.col-md-6
+			form.form-horizontal
+				.form-group
+					label Address
+					input.form-control(type='text', ng-model='options.address')
+				.form-group
+					label Method
+					input.form-control(type='text', ng-model='options.method')
+				.form-group
+					label Data
+					textarea.form-control(ng-model='options.data')
+				.form-group
+					label Number of requests (set 0 for non-stop ddos)
+					input.form-control(type='number', ng-model='options.number')
+				.form-group
+					button.btn.btn-default(ng-click='send()') Send
+		.col-md-6
+			h1 Results
